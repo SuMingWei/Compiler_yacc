@@ -1,0 +1,70 @@
+> Insert {x} into symbol table (scope level: 0)
+> Insert {y} into symbol table (scope level: 0)
+IDENT (name=x, address=0)
+IDENT (name=y, address=1)
+error:3: invalid operation: ADD (mismatched types int and float)
+ADD
+IDENT (name=y, address=1)
+IDENT (name=x, address=0)
+error:4: invalid operation: SUB (mismatched types float and int)
+SUB
+IDENT (name=x, address=0)
+IDENT (name=y, address=1)
+error:5: invalid operation: ASSIGN (mismatched types int and float)
+ASSIGN
+INT_LIT 3
+FLOAT_LIT 3.140000
+error:6: invalid operation: ADD (mismatched types int and float)
+ADD
+FLOAT_LIT 3.000000
+FLOAT_LIT 3.140000
+ADD
+IDENT (name=x, address=0)
+IDENT (name=y, address=1)
+error:8: invalid operation: (operator REM not defined on float)
+REM
+IDENT (name=y, address=1)
+INT_LIT 3
+error:9: invalid operation: (operator REM not defined on float)
+REM
+INT_LIT 3
+TRUE
+error:11: invalid operation: (operator AND not defined on int)
+AND
+FALSE
+INT_LIT 2
+INT_LIT 2
+ADD
+error:12: invalid operation: (operator OR not defined on int)
+OR
+FLOAT_LIT 1.000000
+error:15: non-bool (type float) used as for condition
+FLOAT_LIT 1.000000
+PRINT float
+> Dump symbol table (scope level: 1)
+Index     Name      Type      Address   Lineno    Element type
+IDENT (name=x, address=0)
+INT_LIT 1
+ADD
+error:19: non-bool (type int) used as for condition
+IDENT (name=x, address=0)
+PRINT int
+> Dump symbol table (scope level: 1)
+Index     Name      Type      Address   Lineno    Element type
+FLOAT_LIT 2.000000
+error:23: non-bool (type float) used as for condition
+FLOAT_LIT 2.000000
+PRINT float
+> Dump symbol table (scope level: 1)
+Index     Name      Type      Address   Lineno    Element type
+IDENT (name=x, address=0)
+error:27: non-bool (type int) used as for condition
+IDENT (name=x, address=0)
+PRINT int
+> Dump symbol table (scope level: 1)
+Index     Name      Type      Address   Lineno    Element type
+> Dump symbol table (scope level: 0)
+Index     Name      Type      Address   Lineno    Element type
+0         x         int       0         1         -
+1         y         float     1         2         -
+Total lines: 28

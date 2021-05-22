@@ -1,0 +1,41 @@
+INT_LIT 99
+> Insert {height} into symbol table (scope level: 0)
+INT_LIT 1
+> Insert {i} into symbol table (scope level: 0)
+INT_LIT 2
+> Insert {j} into symbol table (scope level: 0)
+IDENT (name=i, address=1)
+INT_LIT 0
+GTR
+FLOAT_LIT 3.140000
+> Insert {width} into symbol table (scope level: 1)
+> Dump symbol table (scope level: 1)
+Index     Name      Type      Address   Lineno    Element type
+0         width     float     3         5         -
+> Insert {length} into symbol table (scope level: 0)
+IDENT (name=i, address=1)
+INT_LIT 0
+GTR
+STRING_LIT hello world
+> Insert {length} into symbol table (scope level: 1)
+IDENT (name=j, address=2)
+INT_LIT 0
+GTR
+TRUE
+> Insert {lengh} into symbol table (scope level: 2)
+> Dump symbol table (scope level: 2)
+Index     Name      Type      Address   Lineno    Element type
+0         lengh     bool      6         11        -
+STRING_LIT Hi, OuO\n
+> Insert {width} into symbol table (scope level: 1)
+> Dump symbol table (scope level: 1)
+Index     Name      Type      Address   Lineno    Element type
+0         length    string    5         9         -
+1         width     string    7         13        -
+> Dump symbol table (scope level: 0)
+Index     Name      Type      Address   Lineno    Element type
+0         height    int       0         1         -
+1         i         int       1         2         -
+2         j         int       2         3         -
+3         length    float     4         7         -
+Total lines: 14

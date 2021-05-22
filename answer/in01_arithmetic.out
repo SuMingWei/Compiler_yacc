@@ -1,0 +1,26 @@
+> Insert {x} into symbol table (scope level: 0)
+> Insert {y} into symbol table (scope level: 0)
+IDENT (name=x, address=0)
+IDENT (name=y, address=1)
+ADD
+IDENT (name=x, address=0)
+IDENT (name=y, address=1)
+SUB
+IDENT (name=x, address=0)
+IDENT (name=y, address=1)
+MUL
+IDENT (name=x, address=0)
+IDENT (name=y, address=1)
+QUO
+IDENT (name=x, address=0)
+IDENT (name=y, address=1)
+REM
+IDENT (name=x, address=0)
+INC
+IDENT (name=x, address=0)
+DEC
+> Dump symbol table (scope level: 0)
+Index     Name      Type      Address   Lineno    Element type
+0         x         int       0         1         -
+1         y         int       1         2         -
+Total lines: 9

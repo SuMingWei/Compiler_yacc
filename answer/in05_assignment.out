@@ -1,0 +1,60 @@
+> Insert {x} into symbol table (scope level: 0)
+IDENT (name=x, address=0)
+INT_LIT 1
+ASSIGN
+IDENT (name=x, address=0)
+INT_LIT 2
+ADD_ASSIGN
+IDENT (name=x, address=0)
+INT_LIT 3
+SUB_ASSIGN
+IDENT (name=x, address=0)
+INT_LIT 4
+MUL_ASSIGN
+IDENT (name=x, address=0)
+INT_LIT 5
+QUO_ASSIGN
+IDENT (name=x, address=0)
+INT_LIT 6
+REM_ASSIGN
+FLOAT_LIT 3.140000
+> Insert {yy} into symbol table (scope level: 0)
+IDENT (name=yy, address=1)
+FLOAT_LIT 1.000000
+ASSIGN
+IDENT (name=yy, address=1)
+FLOAT_LIT 2.000000
+ADD_ASSIGN
+IDENT (name=yy, address=1)
+FLOAT_LIT 3.000000
+SUB_ASSIGN
+IDENT (name=yy, address=1)
+FLOAT_LIT 4.000000
+MUL_ASSIGN
+IDENT (name=yy, address=1)
+FLOAT_LIT 5.000000
+QUO_ASSIGN
+> Insert {s} into symbol table (scope level: 0)
+IDENT (name=s, address=2)
+STRING_LIT Hello
+ASSIGN
+FALSE
+> Insert {bbb} into symbol table (scope level: 0)
+IDENT (name=bbb, address=3)
+TRUE
+ASSIGN
+IDENT (name=x, address=0)
+PRINT int
+IDENT (name=yy, address=1)
+PRINT float
+IDENT (name=s, address=2)
+PRINT string
+IDENT (name=bbb, address=3)
+PRINT bool
+> Dump symbol table (scope level: 0)
+Index     Name      Type      Address   Lineno    Element type
+0         x         int       0         1         -
+1         yy        float     1         9         -
+2         s         string    2         16        -
+3         bbb       bool      3         19        -
+Total lines: 25

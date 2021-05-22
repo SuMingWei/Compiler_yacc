@@ -1,0 +1,23 @@
+> Insert {x} into symbol table (scope level: 0)
+> Insert {z} into symbol table (scope level: 0)
+error:4: x redeclared in this block. previous declaration at line 1
+error:5: undefined: y
+INT_LIT 8
+ASSIGN
+INT_LIT 8
+IDENT (name=x, address=0)
+error:6: cannot assign to int
+ADD_ASSIGN
+error:8: z redeclared in this block. previous declaration at line 3
+error:10: undefined: gg
+INT_LIT 0
+GTR
+STRING_LIT gg
+PRINT string
+> Dump symbol table (scope level: 1)
+Index     Name      Type      Address   Lineno    Element type
+> Dump symbol table (scope level: 0)
+Index     Name      Type      Address   Lineno    Element type
+0         x         int       0         1         -
+1         z         float     1         3         -
+Total lines: 12

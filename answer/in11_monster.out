@@ -1,0 +1,153 @@
+> Insert {i} into symbol table (scope level: 0)
+IDENT (name=i, address=0)
+INT_LIT 0
+ASSIGN
+IDENT (name=i, address=0)
+INT_LIT 10
+LSS
+IDENT (name=i, address=0)
+INC
+IDENT (name=i, address=0)
+PRINT int
+> Dump symbol table (scope level: 1)
+Index     Name      Type      Address   Lineno    Element type
+IDENT (name=i, address=0)
+INT_LIT 0
+GTR
+INT_LIT 3
+> Insert {x} into symbol table (scope level: 1)
+IDENT (name=x, address=1)
+INT_LIT 0
+INT_LIT 1
+INT_LIT 2
+ADD
+ASSIGN
+IDENT (name=x, address=1)
+INT_LIT 1
+IDENT (name=x, address=1)
+INT_LIT 0
+INT_LIT 1
+SUB
+ASSIGN
+IDENT (name=x, address=1)
+INT_LIT 2
+IDENT (name=x, address=1)
+INT_LIT 1
+INT_LIT 3
+QUO
+ASSIGN
+IDENT (name=x, address=1)
+INT_LIT 2
+PRINT int
+INT_LIT 3
+INT_LIT 4
+INT_LIT 5
+POS
+INT_LIT 8
+NEG
+ADD
+MUL
+SUB
+INT_LIT 10
+INT_LIT 7
+QUO
+SUB
+INT_LIT 4
+NEG
+INT_LIT 3
+REM
+GTR
+TRUE
+NOT
+FALSE
+NOT
+NOT
+AND
+OR
+PRINT bool
+> Dump symbol table (scope level: 1)
+Index     Name      Type      Address   Lineno    Element type
+0         x         array     1         7         int
+> Insert {x} into symbol table (scope level: 0)
+IDENT (name=x, address=2)
+INT_LIT 10
+ADD_ASSIGN
+IDENT (name=x, address=2)
+INT_LIT 0
+GTR
+IDENT (name=x, address=2)
+PRINT int
+IDENT (name=x, address=2)
+DEC
+IDENT (name=x, address=2)
+INT_LIT 0
+NEQ
+FLOAT_LIT 3.140000
+> Insert {y} into symbol table (scope level: 2)
+STRING_LIT If x != 
+PRINT string
+INT_LIT 0
+PRINT int
+IDENT (name=y, address=3)
+PRINT float
+> Dump symbol table (scope level: 2)
+Index     Name      Type      Address   Lineno    Element type
+0         y         float     3         21        -
+FLOAT_LIT 6.600000
+> Insert {z} into symbol table (scope level: 2)
+STRING_LIT If x == 
+PRINT string
+INT_LIT 0
+PRINT int
+IDENT (name=z, address=4)
+PRINT float
+> Dump symbol table (scope level: 2)
+Index     Name      Type      Address   Lineno    Element type
+0         z         float     4         29        -
+> Insert {j} into symbol table (scope level: 1)
+> Insert {i} into symbol table (scope level: 1)
+IDENT (name=i, address=6)
+INT_LIT 1
+ASSIGN
+IDENT (name=i, address=6)
+INT_LIT 9
+LEQ
+IDENT (name=i, address=6)
+INC
+IDENT (name=j, address=5)
+INT_LIT 9
+ASSIGN
+IDENT (name=j, address=5)
+INT_LIT 1
+GEQ
+IDENT (name=j, address=5)
+DEC
+IDENT (name=i, address=6)
+PRINT int
+STRING_LIT *
+PRINT string
+IDENT (name=j, address=5)
+PRINT int
+STRING_LIT =
+PRINT string
+IDENT (name=i, address=6)
+IDENT (name=j, address=5)
+MUL
+PRINT int
+STRING_LIT \t
+PRINT string
+> Dump symbol table (scope level: 3)
+Index     Name      Type      Address   Lineno    Element type
+STRING_LIT \n
+PRINT string
+> Dump symbol table (scope level: 2)
+Index     Name      Type      Address   Lineno    Element type
+> Dump symbol table (scope level: 1)
+Index     Name      Type      Address   Lineno    Element type
+0         j         int       5         34        -
+1         i         int       6         35        -
+> Dump symbol table (scope level: 0)
+Index     Name      Type      Address   Lineno    Element type
+0         i         int       0         1         -
+1         x         int       2         15        -
+Total lines: 47

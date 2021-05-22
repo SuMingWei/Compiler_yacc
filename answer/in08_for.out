@@ -1,0 +1,32 @@
+INT_LIT 0
+> Insert {x} into symbol table (scope level: 0)
+IDENT (name=x, address=0)
+INT_LIT 10
+ADD_ASSIGN
+IDENT (name=x, address=0)
+INT_LIT 0
+GTR
+IDENT (name=x, address=0)
+PRINT int
+IDENT (name=x, address=0)
+DEC
+> Dump symbol table (scope level: 1)
+Index     Name      Type      Address   Lineno    Element type
+> Insert {i} into symbol table (scope level: 0)
+IDENT (name=i, address=1)
+INT_LIT 0
+ASSIGN
+IDENT (name=i, address=1)
+INT_LIT 10
+LSS
+IDENT (name=i, address=1)
+INC
+IDENT (name=i, address=1)
+PRINT int
+> Dump symbol table (scope level: 1)
+Index     Name      Type      Address   Lineno    Element type
+> Dump symbol table (scope level: 0)
+Index     Name      Type      Address   Lineno    Element type
+0         x         int       0         1         -
+1         i         int       1         8         -
+Total lines: 11
