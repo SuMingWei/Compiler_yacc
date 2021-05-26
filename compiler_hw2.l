@@ -38,17 +38,62 @@ newline		[\n]
 <STR>[^\"]* { yylval.s_val = strdup(yytext);
                 return STRING_LIT;
             }
+
 "+"         { return '+'; }
 "-"         { return '-'; }
 "*"         { return '*'; }
+"/"         { return QUO; }
+"%"         { return REM; }
+"++"        { return INC; }
+"--"        { return DEC; }
 
-"print"     { return PRINT; }
+">"         { return GTR; }
+"<"         { return LSS; }
+">="        { return GEQ; }
+"<="        { return LEQ; }
+"=="        { return EQL; }
+"!="        { return NEQ; }
+
+"="         { return ASSIGN; }
+"+="        { return ADD_ASSIGN; }
+"-="        { return SUB_ASSIGN; }
+"*="        { return MUL_ASSIGN; }
+"/="        { return QUO_ASSIGN; }
+"%="        { return REM_ASSIGN; }
+
+"&&"        { return AND; }
+"||"        { return OR ; }
+"!"         { return '!' ; }
+
+"("         { return '(' ; }
+")"         { return ')' ; }
+"["         { return '[' ; }
+"]"         { return ']' ; }
+"{"         { return '{' ; }
+"}"         { return '}' ; }
+
+"int"       { return INT    ; } 
+"float"     { return FLOAT  ; }
+"string"    { return STRING ; }
+"bool"      { return BOOL   ; }
+
+"true"      { return TRUE  ; }
+"false"     { return FALSE ; }
+"print"     { return PRINT ; }
+"if"        { return IF    ; }
+"else"      { return ELSE  ; }
+"for"       { return FOR   ; }
+"while"     { return WHILE ; }
 
 {inumber}   { yylval.i_val = atoi(yytext);
                 return INT_LIT;
             }
 
-{id}        { yylval.ctr.id_name = strdup(yytext);
+{fnumber}   { yylval.f_val = atof(yytext);
+                return FLOAT_LIT;
+            }
+
+{id}        { yylval.id = strdup(yytext);
                 return IDENT;
             }
 [;]         { return SEMICOLON; }
@@ -66,3 +111,25 @@ int yywrap(void)
 {
     return 1;
 }
+
+/*
+">"         { return "GTR"; }
+"<"         { return "LSS"; }
+">="        { return "GEQ"; }
+"<="        { return "LEQ"; }
+"=="        { return "EQL"; }
+"!="        { return "NEQ"; }
+
+
+"&&"        { return "LAND"; }
+"||"        { return "LOR" ; }
+"!"         { return "!"   ; }
+"("         { return "("   ; }
+")"         { return ")"   ; }
+"["         { return "["   ; }
+"]"         { return "]"   ; }
+"{"         { return "{"   ; }
+"}"         { return "}"   ; }
+","         { return ","   ; }
+
+*/
