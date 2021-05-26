@@ -112,24 +112,3 @@ int yywrap(void)
     return 1;
 }
 
-/*
-">"         { return "GTR"; }
-"<"         { return "LSS"; }
-">="        { return "GEQ"; }
-"<="        { return "LEQ"; }
-"=="        { return "EQL"; }
-"!="        { return "NEQ"; }
-
-
-"&&"        { return "LAND"; }
-"||"        { return "LOR" ; }
-"!"         { return "!"   ; }
-"("         { return "("   ; }
-")"         { return ")"   ; }
-"["         { return "["   ; }
-"]"         { return "]"   ; }
-"{"         { return "{"   ; }
-"}"         { return "}"   ; }
-","         { return ","   ; }
-
-*/
